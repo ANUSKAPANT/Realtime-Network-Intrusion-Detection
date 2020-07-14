@@ -20,7 +20,7 @@ cycler==0.10.0
 decorator==4.4.0
 defusedxml==0.6.0
 dicttoxml==1.7.4
-Django==2.2.3
+Django==2.2.13
 django-memoize==2.2.0
 djangorestframework==3.9.4
 docutils==0.15.2
