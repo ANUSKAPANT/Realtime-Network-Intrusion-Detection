@@ -5,7 +5,7 @@ astroid==2.2.5
 attrs==19.1.0
 autopep8==1.4.4
 backcall==0.1.0
-bleach==3.1.0
+bleach==3.1.4
 bokeh==1.2.0
 CacheControl==0.12.5
 cachetools==3.1.1
