@@ -1,0 +1,18 @@
+/** Place your custom CSS in here in case of... */
+
+@media (max-width: 991px) {
+    #mailchimp-top-bar {
+        display: none!important;
+    }
+    body.mc-top-bar--active {
+      padding-top: 0 !important;
+    }
+}
+.daninja-inline--old {
+  border-bottom-width: 2px;
+  border-top-width: 2px;
+}
+
+.sidebar .has-overlay-gradient::after {
+    bottom: -1px;
+}

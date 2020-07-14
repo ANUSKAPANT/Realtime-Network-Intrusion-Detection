@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js" integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>  
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <div class="navbar"><span><h1>Network Traffic Logs</h1></span></div>
+        <table class="" width="100%" border="1">
+            <thead>
+                <tr>
+                    <!-- <td>flow id</td> -->
+                    <td>source ip</td>
+                    <td>source port</td>
+                    <td>destination ip</td>
+                    <td>destination port</td>
+                    <td>protocol</td>
+                    <!-- <td>timestamp</td> -->
+                    <td>source bytes per second</td>
+                    <td>source packets per second</td>
+                    <td>Label</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for log in traffic_logs %}
+                <tr>
+                    <!-- <td>{{ log.flow_id }}</td> -->
+                    <td>{{ log.src_ip }}</td>
+                    <td>{{ log.src_port }}</td>
+                    <td>{{ log.dst_ip }}</td>
+                    <td>{{ log.dst_port }}</td>
+                    <td>{{ log.protocol }}</td>
+                    <!-- <td>{{ log.timestamp }}</td> -->
+                    <td>{{ log.flow_byts_per_s }}</td>
+                    <td>{{ log.flow_pkts_per_s }}</td>
+                    <td>{{ log.label }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!-- <div class="wrapper">
+        <div id="chart"></div> -->
+        <!-- {% for log in traffic_logs %}
+            <p>{{log.flow_id}}</p>
+        {% endfor%} -->
+        <script>
+            // function getData() {
+            //     $.get("/data", function(data, status){
+            //         console.log("Data: " + data[0]['flow_id']);
+            //         return data;
+            //     });
+            // }  
+
+            // Plotly.plot('chart',[{
+            //     x:[
+            //         {% for log in traffic_logs %} 
+            //          '{{log.timestamp|date:"Y-m-d"}} {{log.timestamp|time:"h:i:s"}}',
+            //         {% endfor %}
+            //         ],
+            //     y:[
+            //         {% for log in traffic_logs %} 
+            //          {{log.flow_byts_per_s}},
+            //         {% endfor %}
+            //     ],
+            //     type:'scatter'
+            // }]);
+            
+            // setInterval(function(){
+            //     $.get("/data", function(data, status){
+            //         $.each(data, function (i, log) {
+            //             var date = new Date(data[i]['Timestamp']);
+            //             //var formattedDate = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' + date.getFullYear() + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+            //             var formattedDate = (
+            //                 date.getFullYear() +
+            //                 '-' + ('0' + (date.getMonth() + 1)).slice(-2) + 
+            //                 '-' + ('0' + date.getDate()).slice(-2) + 
+            //                 ' ' + ('0' + date.getHours()).slice(-2) + 
+            //                 ':' + ('0' + date.getMinutes()).slice(-2) +
+            //                 ':' + ('0' + date.getSeconds()).slice(-2));
+            //             var update = {
+            //                 x: [[formattedDate]],
+            //                 y: [[data[i]['Flow Byts/s']]]
+            //             };
+            //             Plotly.extendTraces('chart', update,[0],1);
+
+            //             // Plotly.extendTraces('chart',{ 
+            //             //     x:[dateTimeString],
+            //             //     y:[data[i]['flow_pkts_per_s']]},[0]);
+            //             console.log(formattedDate)
+            //         });
+            //     });
+            // },1000);
+        </script>
+    </div>
+    </body>
+</html>
+<body>
+</body>

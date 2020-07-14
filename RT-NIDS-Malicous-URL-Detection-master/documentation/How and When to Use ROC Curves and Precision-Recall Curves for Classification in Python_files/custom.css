@@ -1,0 +1,194 @@
+/*
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it
+is easier to update the theme. Simply copy an existing style
+from style.css to this file, and modify it to your liking. */
+
+
+/* GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+/* start here */
+.page-id-562 .title { display: none; }
+
+/* homepage */
+.page-id-1678 #main-nav { display: none; }
+.page-id-1678 #header { display: none; }
+.page-id-1678 .title { display: none; }
+
+/* thank you */
+.page-id-3075 #main-nav { display: none; }
+.page-id-3075 #header { display: none; }
+.page-id-3075 .title { display: none; }
+
+/* products */
+.page-id-2641 .title { display: none; }
+
+/* machine learning algorithms from scratch */
+.page-id-3394 #main-nav { display: none; }
+.page-id-3394 #header { display: none; }
+.page-id-3394 .title { display: none; }
+
+/* machine learning mastery with R */
+.page-id-2270 #main-nav { display: none; }
+.page-id-2270 #header { display: none; }
+.page-id-2270 .title { display: none; }
+
+/* master machine learning algorithms */
+.page-id-2406 #main-nav { display: none; }
+.page-id-2406 #header { display: none; }
+.page-id-2406 .title { display: none; }
+
+/* machine learning mastery with Python */
+.page-id-2497 #main-nav { display: none; }
+.page-id-2497 #header { display: none; }
+.page-id-2497 .title { display: none; }
+
+/* machine learning mastery with Python2 */
+.page-id-3404 #main-nav { display: none; }
+.page-id-3404 #header { display: none; }
+.page-id-3404 .title { display: none; }
+
+/* deep learning with python */
+.page-id-2620 #main-nav { display: none; }
+.page-id-2620 #header { display: none; }
+.page-id-2620 .title { display: none; }
+
+/* deep learning with python2 */
+.page-id-3406 #main-nav { display: none; }
+.page-id-3406 #header { display: none; }
+.page-id-3406 .title { display: none; }
+
+/* machine learning mastery with weka */
+.page-id-2904 #main-nav { display: none; }
+.page-id-2904 #header { display: none; }
+.page-id-2904 .title { display: none; }
+
+/* xgboost with python */
+.page-id-3057 #main-nav { display: none; }
+.page-id-3057 #header { display: none; }
+.page-id-3057 .title { display: none; }
+
+/* xgboost with python2 */
+.page-id-3408 #main-nav { display: none; }
+.page-id-3408 #header { display: none; }
+.page-id-3408 .title { display: none; }
+
+/* super bundle */
+.page-id-3118 #main-nav { display: none; }
+.page-id-3118 #header { display: none; }
+.page-id-3118 .title { display: none; }
+
+/* python bundle */
+.page-id-3130 #main-nav { display: none; }
+.page-id-3130 #header { display: none; }
+.page-id-3130 .title { display: none; }
+
+/* beginner bundle */
+.page-id-3135 #main-nav { display: none; }
+.page-id-3135 #header { display: none; }
+.page-id-3135 .title { display: none; }
+
+/* algorithms bundle */
+.page-id-3417 #main-nav { display: none; }
+.page-id-3417 #header { display: none; }
+.page-id-3417 .title { display: none; }
+
+/* intro time series */
+.page-id-3811 #main-nav { display: none; }
+.page-id-3811 #header { display: none; }
+.page-id-3811 .title { display: none; }
+
+/* time series bundle */
+.page-id-3824 #main-nav { display: none; }
+.page-id-3824 #header { display: none; }
+.page-id-3824 .title { display: none; }
+
+/* r bundle */
+.page-id-3829 #main-nav { display: none; }
+.page-id-3829 #header { display: none; }
+.page-id-3829 .title { display: none; }
+
+/* LSTM book */
+.page-id-4205 #main-nav { display: none; }
+.page-id-4205 #header { display: none; }
+.page-id-4205 .title { display: none; }
+
+/* Deep Learning bundle */
+.page-id-4224 #main-nav { display: none; }
+.page-id-4224 #header { display: none; }
+.page-id-4224 .title { display: none; }
+
+/* Deep Learning for NLP */
+.page-id-4597 #main-nav { display: none; }
+.page-id-4597 #header { display: none; }
+.page-id-4597 .title { display: none; }
+
+/* NLP bundle */
+.page-id-4609 #main-nav { display: none; }
+.page-id-4609 #header { display: none; }
+.page-id-4609 .title { display: none; }
+
+/* LAFML */
+.page-id-5013 #main-nav { display: none; }
+.page-id-5013 #header { display: none; }
+.page-id-5013 .title { display: none; }
+
+/* SMFML */
+.page-id-5910 #main-nav { display: none; }
+.page-id-5910 #header { display: none; }
+.page-id-5910 .title { display: none; }
+
+/* DLFTSF */
+.page-id-6448 #main-nav { display: none; }
+.page-id-6448 #header { display: none; }
+.page-id-6448 .title { display: none; }
+
+/* Deep TS Bundle */
+.page-id-6462 #main-nav { display: none; }
+.page-id-6462 #header { display: none; }
+.page-id-6462 .title { display: none; }
+
+/* Better Deep Learning */
+.page-id-6907 #main-nav { display: none; }
+.page-id-6907 #header { display: none; }
+.page-id-6907 .title { display: none; }
+
+/* Better Deep Learning Bundle */
+.page-id-7042 #main-nav { display: none; }
+.page-id-7042 #header { display: none; }
+.page-id-7042 .title { display: none; }
+
+/* DLFCV */
+.page-id-7678 #main-nav { display: none; }
+.page-id-7678 #header { display: none; }
+.page-id-7678 .title { display: none; }
+
+/* FLDB */
+.page-id-7891 #main-nav { display: none; }
+.page-id-7891 #header { display: none; }
+.page-id-7891 .title { display: none; }
+
+/* Support */
+.page-id-8447 .title { display: none; }
+
+/* GANWP */
+.page-id-8459 #main-nav { display: none; }
+.page-id-8459 #header { display: none; }
+.page-id-8459 .title { display: none; }
+
+
+/* DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go below this line */
+
+
+	
+}

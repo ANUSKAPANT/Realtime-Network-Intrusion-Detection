@@ -1,0 +1,62 @@
+ {%extends 'netapp/base.html'%}
+
+{%load static%}
+{%block head%}
+	<link rel="stylesheet" type="text/css" href="{%static 'netapp/css/style.css'%}">
+	<script type="text/javascript" src="{%static 'netapp/js/script.js'%}"></script>
+	<script type="text/javascript" src="{%static 'netapp/js/plotly.js'%}"></script>
+	<script type="text/javascript" src="{%static 'netapp/js/plotly-geo-assets.js'%}"></script>
+{%endblock%}
+
+{%block body%}
+<body>
+	<header>
+		<nav class="navbar bg-light">
+			<h3>
+				<span id="top-menu"><i class="fa fa-bars"></i></span>&emsp;
+				<span id="brand">
+					<i class="fa fa-cloud" style="color: orange;"></i> 
+					<img src="{%static 'netapp/img/brand.png'%}" style="border-radius: 40%;">
+				</span>
+			</h3>
+			<ul class="navbar-menu">
+				<li id="note">
+					<a href="#"><i class="fa fa-bell"></i> Notifications</a>
+					<div></div>
+					<span class="fa fa-play"></span>
+				</li>
+				<li><a href="#"><i class="fa fa-user"></i> DashBoard</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="sidebars">
+		<ul>
+			<li id="home"><i class="fa fa-home"></i> Home</li>
+			<li><i class="fa fa-database"></i> Network Analytics</li>
+			<li><i class="fa fa-globe"></i> Visualization</li>
+			<li><i class="fa fa-user"></i> DashBoard</li>
+			<li id="logout"><i class="fa fa-sign-out"></i> Logout</li>
+			<li id="close-menu"><span class="fa fa-close"></span> Close</li>
+		</ul>
+	</section>
+	{% if messages %}
+	<center>
+		<ul class="messages">
+		    {% for message in messages %}
+		    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		    {% endfor %}
+		</ul>
+	</center>
+	{% endif %}
+	<div class="inlinediv">
+		<p id="loadinfo" style="text-align: center;">please wait. Loading...</p>
+		<div id="portscan" class="col-md-5"></div>
+	    <div id="portscan0" class="col-md-5"></div>
+	</div>
+	<div id="dashearth" class="container"></div>
+	<div id="scattergeo" class="container"></div>
+	<div id="sankey" class="container"></div>
+	<script type="text/javascript" src="{%static 'netapp/js/dash.js'%}"></script>
+	<!--<script type="text/javascript" src="{%static 'netapp/js/treemap.js'%}"></script>-->
+</body>
+{%endblock%}

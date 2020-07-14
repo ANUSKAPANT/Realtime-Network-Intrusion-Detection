@@ -1,0 +1,181 @@
+{%extends 'netapp/base.html'%}
+
+{%load static%}
+{%block head%}
+	<link rel="stylesheet" type="text/css" href="{%static 'netapp/css/style.css'%}">
+	<script type="text/javascript" src="{%static 'netapp/js/script.js'%}"></script>
+	<script type="text/javascript" src="{%static 'netapp/js/plotly.js'%}"></script>
+{%endblock%}
+
+{%block body%}
+<body>
+	<!--<header>
+		<nav class="navbar bg-light">
+			<h3>
+				<span id="top-menu"><i class="fa fa-bars"></i></span>&emsp;
+				<span id="brand">
+					<i class="fa fa-cloud" style="color: orange;"></i> 
+					<img src="{%static 'netapp/img/brand.png'%}" style="border-radius: 40%;">
+				</span>
+			</h3>
+			<ul class="navbar-menu">
+				<li id="note">
+					<a href="#"><i class="fa fa-bell"></i> Notifications</a>
+					<div></div>
+					<span class="fa fa-play"></span>
+				</li>
+				<li><a href="/dashboard/"><i class="fa fa-user"></i> DashBoard</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="sidebars">
+		<ul>
+			<li id="home"><i class="fa fa-home"></i> Home</li>
+			<li><i class="fa fa-database"></i> Network Analytics</li>
+			<li><i class="fa fa-globe"></i> Visualization</li>
+			<li id="dashboard"><i class="fa fa-user"></i> DashBoard</li>
+			<li id="logout"><i class="fa fa-sign-out"></i> Logout</li>
+			<li id="close-menu"><span class="fa fa-close"></span> Close</li>
+		</ul>
+	</section>-->
+	{% if messages %}
+	<center>
+		<ul class="messages">
+		    {% for message in messages %}
+		    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		    {% endfor %}
+		</ul>
+	</center>
+	{% endif %}
+<section class="container-fluid">
+
+	<div class="row">
+		<div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+	              <h6 class="m-0 font-weight-bold text-primary">Bytes Flow Per Minute</h6>
+                </div>
+                <div class="row">
+		            <div id="graph-flow" class="col-lg-5"></div>
+					<div id="graph-flow-overall" class="col-lg-5"></div>
+				</div>
+	        </div>
+        </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+	              <h6 class="m-0 font-weight-bold text-primary">Packets Flow Per Minute</h6>
+                </div>
+                <div class="row">
+		            <div id="graph-packetflow" class="col-lg-5"></div>
+					<div id="graph-fwdbwdpacketflow" class="col-lg-5"></div>
+				</div>
+	        </div>
+        </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+	               <h6 class="m-0 font-weight-bold text-primary">Parallel Coordinates</h6>
+	                <select id="choices">
+						<option selected="true">src_port</option>
+						<option>dst_port</option>
+						<option>src_ip</option>
+						<option>dst_ip</option>
+					</select><br>
+                </div>
+                <center><p id="parinfo">loading...</p></center>
+                <div class="row">
+					<div id="graph-parallel" class="col-md-10"></div>
+				</div>
+	        </div>
+        </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+	                <h6 class="m-0 font-weight-bold text-primary">Protocol Used and 3D Network Flow</h6>
+		            <select id="flowselect" class="selectbox">
+						<option>Choose Date</option>
+					</select>
+                </div>
+				<center><p id="flowinfo">loading...</p></center>
+				<div class="row">
+					<div id="graph-pie" class="col-lg-5"></div>
+					<div id="graphnetflow" class="col-lg-5"></div>
+				</div>
+	        </div>
+        </div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+	              <h6 class="m-0 font-weight-bold text-primary">Ip Address vs Bytes Flow</h6>
+                </div>
+                <div class="row">
+	                <div id="graph-src" class="col-lg-5"></div>
+					<div id="graph-dst" class="col-lg-5"></div>
+				</div>
+	        </div>
+        </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+	                <h6 class="m-0 font-weight-bold text-primary">Box Plot Diagrams</h6>
+		            <select id="ipselect" class="selectbox">
+						<option selected="" value="none">Source IP</option>
+					</select>
+					<select id="portselect" class="selectbox">
+						<option selected="" value="none">Source Port</option>
+					</select>
+					<button class="btn btn-sm" id="resetbtn">Reset</button>
+                </div>
+                <center><p id="boxinfo">loading...</p></center>
+                <div class="row">
+					<div id="graph-box1" class="col-lg-5"></div>
+					<div id="graph-box2" class="col-lg-5"></div>
+				</div>
+	        </div>
+        </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+            	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+	                <h6 class="m-0 font-weight-bold text-primary">Port Scanning</h6>
+                </div>
+                <center><p id="loadinfo">Loading...</p></center>
+                <div class="row">	
+					<div id="portscan" class="col-md-5"></div>
+				    <div id="portscan0" class="col-md-5"></div>
+				</div>
+	        </div>
+        </div>
+	</div>
+
+</section>
+	<!--<div id="treemap"></div>-->
+	<script type="text/javascript" src="{%static 'netapp/js/graph.js'%}"></script>
+	<!--<script type="text/javascript" src="{%static 'netapp/js/treemap.js'%}"></script>-->
+</body>
+{%endblock%}

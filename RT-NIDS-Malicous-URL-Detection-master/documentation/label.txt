@@ -1,0 +1,59 @@
+##if each individual attack
+df.loc[df['SubLabel']=='Normal', 'SubLabel'] = 0
+
+df.loc[df['SubLabel']=='ACK Scan', 'SubLabel'] = 1
+df.loc[df['SubLabel']=='FIN Scan', 'SubLabel'] = 2
+df.loc[df['SubLabel']=='TCP SYN Scan', 'SubLabel'] = 3
+df.loc[df['SubLabel']=='FTP Bounce Scan', 'SubLabel'] = 4
+df.loc[df['SubLabel']=='Host Scan', 'SubLabel'] = 5
+df.loc[df['SubLabel']=='Port Scan', 'SubLabel'] = 6
+
+df.loc[df['SubLabel']=='DOS goldeneye', 'SubLabel'] = 7
+df.loc[df['SubLabel']=='DOS Slowloris', 'SubLabel'] = 8
+
+df.loc[df['SubLabel']=='SSH BruteForce', 'SubLabel'] = 9
+df.loc[df['SubLabel']=='SSH BruteForce', 'SubLabel'] = 10
+df.loc[df['SubLabel']=='FTP Bruteforce', 'SubLabel'] = 11
+df.loc[df['SubLabel']=='MySql Bruteforce', 'SubLabel'] = 12
+
+
+
+df.loc[df['SubLabel']=='Malware Infiltration', 'SubLabel'] = 13
+
+df.loc[df['SubLabel']=='ICMP Flood', 'SubLabel'] = 14
+df.loc[df['SubLabel']=='Push ACK Flood', 'SubLabel'] = 15
+df.loc[df['SubLabel']=='SYN FIN Flood', 'SubLabel'] = 16
+df.loc[df['SubLabel']=='UDP Flood', 'SubLabel'] = 17
+df.loc[df['SubLabel']=='Xmas Flood', 'SubLabel'] = 18
+
+#
+##
+## grouped attack #########################
+
+
+df.loc[df['SubLabel']=='Normal', 'SubLabel'] = 0
+
+df.loc[df['SubLabel']=='ACK Scan', 'SubLabel'] = 1
+df.loc[df['SubLabel']=='FIN Scan', 'SubLabel'] = 1
+df.loc[df['SubLabel']=='TCP SYN Scan', 'SubLabel'] = 1
+df.loc[df['SubLabel']=='FTP Bounce Scan', 'SubLabel'] = 1
+df.loc[df['SubLabel']=='Host Scan', 'SubLabel'] = 1
+df.loc[df['SubLabel']=='Port Scan', 'SubLabel'] = 1
+
+df.loc[df['SubLabel']=='DOS goldeneye', 'SubLabel'] = 2
+df.loc[df['SubLabel']=='DOS Slowloris', 'SubLabel'] = 2
+
+df.loc[df['SubLabel']=='SSH BruteForce', 'SubLabel'] = 3
+df.loc[df['SubLabel']=='SSH BruteForce', 'SubLabel'] = 3
+df.loc[df['SubLabel']=='FTP Bruteforce', 'SubLabel'] = 3
+df.loc[df['SubLabel']=='MySql Bruteforce', 'SubLabel'] = 3
+
+
+
+df.loc[df['SubLabel']=='Malware Infiltration', 'SubLabel'] = 4
+
+df.loc[df['SubLabel']=='ICMP Flood', 'SubLabel'] = 5
+df.loc[df['SubLabel']=='Push ACK Flood', 'SubLabel'] = 5
+df.loc[df['SubLabel']=='SYN FIN Flood', 'SubLabel'] = 5
+df.loc[df['SubLabel']=='UDP Flood', 'SubLabel'] = 5
+df.loc[df['SubLabel']=='Xmas Flood', 'SubLabel'] = 5

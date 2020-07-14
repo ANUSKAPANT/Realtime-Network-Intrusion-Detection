@@ -1,0 +1,8 @@
+Real Time Network Intrusion Detection using Dense Neural Network and Network Traffic Visualization for Campus Network
+
+Modules:
+	1. Dataset Generation and Neural Network model Creation
+	2. Real Time Network Intrusion Detection using the neural network model
+	3. Alert Notification system for Intrusion detection
+	4. Network Traffic Visualization Dashboard for Network Admins
+

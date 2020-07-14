@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "60144388460",
+    "firebase_url": "https://sniffer-242d5.firebaseio.com",
+    "project_id": "sniffer-242d5",
+    "storage_bucket": "sniffer-242d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60144388460:android:d7e6d4a2964678ea",
+        "android_client_info": {
+          "package_name": "com.ioe.sniffer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60144388460-42qn47j77an9h1era5kljip1uq4evgp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ioe.sniffer",
+            "certificate_hash": "083ae52194712f8662809e0186e814656ce1c74a"
+          }
+        },
+        {
+          "client_id": "60144388460-183tpcsal6jvcslrf6g6g1l7s49ot9eu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF1W95OLCuGhasQnSvpn6sNFFWAxiP2Gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60144388460-183tpcsal6jvcslrf6g6g1l7s49ot9eu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

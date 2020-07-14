@@ -1,0 +1,1 @@
+jQuery(document).ready(function(i){i(".primarius").each(function(h,t){$this=i(this),0===$this.height()&&$this.next(".secundarius").show()})});

@@ -1,0 +1,189 @@
+body{
+	width: 100%;
+	line-height: 1.6em;
+	background: #f0f0f0;
+	position: relative;
+}
+.inlinediv{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.inlinediv div{
+	display: inline-block;
+}
+.selectbox{
+	width: 250px;
+	padding: 4px 10px;
+	border: 1px solid gray;
+	border-radius: 4px 4px;
+	margin-left: 15px;
+}
+#choices{
+	width: 300px;
+	padding: 4px 10px;
+	border: 1px solid gray;
+	border-radius: 4px 4px;
+	margin-left: 15px;
+}
+.messages{
+	list-style: none;
+	padding: 0px;
+}
+.info{
+	color: orange;
+}
+.warning{
+	color: crimson;
+}
+.success{
+	color: green;
+}
+.sidebars{
+	position: fixed;
+	top: 90px;
+	left: 0px;
+	width: 300px;
+	height: 90vh;
+	background: #fff;
+	z-index: 500;
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	display: none;
+}
+.sidebars ul{
+	list-style: none;
+	padding: 0px;
+	position: relative;
+}
+.sidebars ul li{
+	padding: 10px 30px;
+	padding-right: 0px;
+	font-size: 18px;
+	color: #555;
+	font-weight: bold;
+}
+.sidebars ul li:hover{
+	cursor: pointer;
+	background: lightgray;
+	border: 1px solid lightgray;
+	border-radius: 4px 4px;
+	color: orange;
+}
+.graphflow{
+	width: 100%;
+}
+.graphdiv{
+}
+.graphdiv div{
+	width: 45%;
+	margin: 10px;
+	display: inline-block;
+}
+.navbar-menu{
+	position: relative;
+}
+#note div{
+	position: absolute;
+	top: 55px;
+	left: -150px;
+	width: 110%;
+	z-index: 100;
+	background: #fff;
+	color: #444;
+	padding: 0px 0px;
+	border: 1px solid lightgray;
+	border-radius: 4px 4px;
+	display: none;
+}
+#note span{
+	color: lightgray;
+	transform: rotate(-90deg);
+	font-size: 22px;
+	position: absolute;
+	top: 35px;
+	left: 60px;
+	z-index: 100;
+	display: none;
+}
+header{
+	border-bottom: 5px solid white;
+	z-index: 100;
+}
+header nav ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+header nav ul li{
+	display: inline-block;
+	padding: 10px;
+}
+header nav ul li a:hover{
+	text-decoration: none;
+}
+header nav h3{
+	color: #444;
+	padding-left: 30px;
+	padding-top: 7px;
+}
+.notes-ul{
+	padding: 0px;
+	margin: 0px;
+}
+.notes-ul li{
+	width: 100%;
+	font-size: 13px;
+	padding: 0px;
+	padding-left: 10px;
+	border-bottom: 1px solid lightgray;
+}
+.notes-ul li:hover{
+	background: #f0f0f0;
+	color: orange;
+	cursor: pointer;
+}
+#top-menu:hover,#brand:hover{
+	color: #111;
+	cursor: pointer;
+}
+/*Login Css*/
+.logindiv{
+	width: 60%;
+	margin: auto;
+}
+.logindiv form{
+	padding-left: 20px;
+}
+.logindiv form input{
+	width: 70%;
+	margin: 5px;
+	padding: 4px 10px;
+	border: 1px solid lightgray;
+	border-radius: 4px 4px;
+}
+.logindiv form button,form a{
+	margin: 5px;
+}
+.logindiv form ul li{
+	color: crimson;
+}
+@media(max-width: 768px){
+	.logindiv{
+		width: 90%;
+	}
+	.logindiv form input{
+		width: 90%;
+	}
+	#note div{
+		left: -10px;
+	}
+}
+@media(max-width: 1024px){
+	.sidebars{
+		display: none;
+	}
+	.graphdiv div{
+		display: block;
+	}
+}

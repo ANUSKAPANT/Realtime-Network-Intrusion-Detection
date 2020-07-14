@@ -1,0 +1,823 @@
+body{
+	margin: 0px;
+	width: 100%;
+	font-family: arial,helvatica,san-serif;
+	line-height: 1.6em;
+}
+.chatfile{
+	display: none;
+}
+.inline-div{
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+.previewdiv .postimage,.postvideo,.postfile{
+	display: none;
+	position: relative;
+}
+.previewdiv img,video,embed{
+	width: 200px;
+}
+.previewdivclose{
+	font-size: 30px;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+.logo-image{
+	width: 100%;
+}
+.photodiv{
+}
+.photodiv ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	background: #f0f0f0;
+	margin-bottom: 15px;
+	border: 1px solid lightgray;
+}
+.photodiv h6{
+	background: lightgray;
+	padding: 5px 10px;
+}
+.photodiv ul li{
+	width: 30%;
+	display: inline-block;
+	padding: 10px 5px;
+}
+.pp-lg{
+	width: 80px;
+	height: 80px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 1px solid lightgrey;
+	padding: 1px;
+}
+.pp-lg:hover{
+	cursor: pointer;
+}
+.pp{
+	width: 35px;
+	height: 35px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 1px solid lightgrey;
+	padding: 1px;
+}
+.pp-icon{
+	width: 25px;
+	height: 25px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+.feedphoto{
+	width: 94%;
+}
+#nav-ul{
+	text-align: center;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+#nav-ul li.nav-li{
+	display: inline-block;
+	font-size: 16px;
+	padding: 15px;
+	position: relative;
+}
+#nav-ul li.nav-li a{
+	color: #444;
+	text-decoration: none;
+}
+#nav-ul li.nav-li a:hover{
+	cursor: pointer;
+	color: #111;
+}
+.extramenuli{
+	position: relative;
+}
+.extramenu{
+	position: absolute;
+	top: 38px;
+	right: 18px;
+	width: 100px;
+	background: white;
+	border: 1px solid #f0f0f0;
+	z-index: 1000;
+	padding: 10px 10px;
+	display: none;
+}
+.notecount,.msgcount{
+	position: absolute;
+	top: 7px;
+	left: -1px;
+	color: crimson;
+	font-weight: bold;
+}
+
+.cp{
+	width: 100%;
+}
+#blogpost{
+	width: 60%;
+	margin: auto;
+	padding: 0px;
+	padding-bottom: 20px;
+	border: 1px solid lightgrey;
+	background: #f0f0f0;
+}
+.friendsdiv{
+	width: 60%;
+	margin: auto;
+	padding: 0px;
+	padding-bottom: 20px;
+	border: 1px solid lightgrey;
+	background: #f0f0f0;
+}
+.friendsdiv{
+	padding: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.friendsdiv ul{
+	list-style: none;
+	position: relative;
+}
+.friendsdiv ul li{
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+}
+.leftslide,.rightslide{
+	position: absolute;
+	top: 45%;
+	cursor: pointer;
+	font-size: 17px;
+}
+.leftslide{
+	left: 0%;
+}
+.rightslide{
+	right: 0%;
+}
+#blogpost form{
+	margin-left: 20px;
+}
+#blogpost form textarea{
+	border: none;
+	border-bottom: 1px solid lightgrey;
+	border-radius: 2px 2px;
+	margin-top: 7px;
+	min-height: 60px;
+	width: 90%;
+	padding: 4px 15px;
+	resize: none;
+	color: #444;
+}
+#blogpost form input[type="file"]{
+	display: none;
+}
+#createpost{
+	width: 100%;
+	background: lightgrey;
+	padding: 4px 10px;
+	color: #333;
+	font-weight: bold;
+}
+#inputdiv {
+}
+#linked label{
+	font-size: 20px;
+	padding: 7px;
+	cursor: pointer;
+}
+/*profile css*/
+#logout{
+	text-align: right;
+	color: #fff;
+}
+article section{
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+.explain{
+	width: 80%;
+	margin: auto;
+}
+#passchange{
+	width: 70%;
+	margin: auto;
+}
+#passchange div{
+	padding-left: 20px;
+}
+#feedheadings{
+	padding: 10px 10px;
+}
+#feeds{
+	width: 60%;
+	margin: auto;
+	padding: 0px;
+	padding-bottom: 20px;
+	border: 1px solid lightgrey;
+	background: #f0f0f0;
+}
+.feed-ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.feed-ul li{
+	padding-left: 30px;
+}
+.feedmenu{
+	float: right;
+	padding-right: 30px;
+	color: #555;
+	position: relative;
+}
+.feedmenu span#optspan{
+	transform: rotate(90deg);
+	font-size: 20px;
+}
+.feedmenu span:hover{
+	cursor: pointer;
+	color: #333;
+}
+.feedmenu ul{
+	padding: 0px;
+	margin-right: 15px;
+	margin-top: 15px;
+	list-style: none;
+	background: #fff;
+	position: absolute;
+	top: 5px;
+	right: 30px;
+	width: 200px;
+	display: none;
+}
+.feedmenu ul li{
+	margin: 0px;
+	padding: 15px;
+}
+.feedmenu ul li:hover{
+	cursor: pointer;
+	color: #222;
+}
+.privacy{
+	color: #444;
+	position: relative;
+}
+.privacy span:hover{
+	color: #222;
+	cursor: pointer;
+}
+.privacy ul{
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	padding: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	list-style: none;
+	background: #fff;
+	display: none;
+}
+.privacy ul li{
+	padding: 5px;
+}
+.privacy ul li:hover{
+	color: #222;
+	cursor: pointer;
+}
+.dblfilediv{
+	position: relative;
+}
+.filedivleft,.filedivright{
+	position: absolute;
+	top: 50%;
+	z-index: 1000;
+	font-size: 25px;
+	color: #444;
+}
+.filedivleft:hover,.filedivright:hover{
+	cursor: pointer;
+	color: #000;
+	font-weight: bold;
+}
+.filedivleft{
+	left: -4%;
+}
+.filedivright{
+	right: 10px;
+}
+.getfile{
+	display: none;
+}
+#share{
+	position: relative;
+}
+#share ul{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	padding: 0px;
+	margin-right: 15px;
+	margin-top: 15px;
+	list-style: none;
+	background: #fff;
+	font-family: arial;
+	color: #444;
+	font-size: 16px;
+	width: 160px;
+	z-index: 1000;
+	cursor: default;
+	display: none;
+}
+#share ul li{
+	padding: 10px;
+}
+#share ul li:hover{
+	color: #222;
+	cursor: pointer;
+}
+.feedopt span{
+	font-size: 20px;
+	color: #555;
+	padding: 10px;
+}
+.feedopt span:hover{
+	cursor: pointer;
+	color: #333;
+}
+.emojidiv{
+	position: relative;
+}
+.emojidiv ul{
+	padding: 0px;
+	padding: 20px;
+	list-style: none;
+	position: absolute;
+	top: 20px;
+	left: 25px;
+	width: 190px;
+	background: #fff;
+	display: none;
+	z-index: 1000;
+}
+.emojidiv ul li{
+	display: table-row;
+	padding: 10px;
+}
+.feed-comments ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+.feed-comments ul li{
+	padding: 5px;
+}
+#commentopt{
+	position: relative;
+	cursor: pointer;
+}
+#commentopt ul{
+	list-style: none;
+	position: absolute;
+	top: 12px;
+	left: 15px;
+	background: #fff;
+	padding: 10px;
+	font-family: arial;
+	display: none;
+}
+#commentopt ul li{
+	padding: 7px;
+	color: #555;
+}
+#commentopt ul li:hover{
+	cursor: pointer;
+	color: #222;
+}
+.feedcommentopt{
+	display: inline-block;
+}
+.feedform form input{
+	border: 1px solid lightgrey;
+	-webkit-border-radius: 20px 20px;
+	-moz-border-radius: 20px 20px;
+	padding: 4px 10px;
+	width: 70%;
+	color: #333;
+}
+.feedform form button{
+	border: none;
+	color: #333;
+}
+.feedform form button:hover{
+	color: #222;
+}
+/*#logout a{
+	text-decoration: none;
+	font-size: 17px;
+	color: #444;
+	border: 1px solid lightgrey;
+	padding: 2px 5px;
+	border-radius: 4px 4px;
+	background: #f0f0f0;
+}*/
+/*profile css*/
+.profile{
+	width: 60%;
+	margin: auto;
+}
+.profileimage{
+	text-align: center;
+	position: relative;
+}
+.absolutepp{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+.absoluteclose{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 30px;
+	color: #f0f0f0;
+	cursor: pointer;
+	display: none;
+}
+.absoluteclose{
+	cursor: pointer;
+	color: #fff;
+}
+.absolutebtn{
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+}
+.absolutebtn .btn{
+	padding: 2px 10px;
+	background: silver;
+	color: #333;
+	border: 1px solid lightgrey;
+	border-radius: 2px 2px;
+	z-index: 100;
+}
+.absolutebtn .btn:hover{
+	cursor: pointer;
+}
+#savebtn{
+	display: none;
+}
+.profilemenu ul{
+	list-style: none;
+	padding: 0px;
+	background: gray;
+	text-align: center;
+}
+.profilemenu ul li{
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 16px;
+	color: #f0f0f0;
+	background: #777;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+.profilemenu ul li:hover{
+	cursor: pointer;
+	color: #fff;
+	background: #333;
+}
+.aboutuser{
+	background: #f0f0f0;
+	border: 1px solid lightgray;
+	padding-bottom: 10px;
+}
+.aboutuser ul{
+	font-size: 16px;
+	font-family: hevatica;
+}
+.aboutuser  #editppbtn{
+	margin-left: 15px;
+}
+.aboutuser h6{
+	background: lightgray;
+	padding: 5px 10px;
+}
+.friends{
+	margin-bottom: 20px;
+}
+.friends h6{
+	border: 1px solid lightgray;
+	padding-left: 10px;
+	background: lightgray;
+	padding: 5px 10px;
+}
+.friends ul{
+	list-style: none;
+}
+.friends ul li{
+	text-align: center;
+	display: inline-block;
+}
+.followfrn,.followerfrn{
+	background: #f0f0f0;
+	border: 1px solid lightgray;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+.friendsmenu{
+	list-style: none;
+	background: #f0f0f0;
+}
+.friendsmenu li{
+	width: 49%;
+	display: inline-block;
+}
+.friendsmenu li:hover{
+	cursor: pointer;
+}
+/*Message Css*/
+.notediv{
+	width: 40%;
+	position: absolute;
+	top: 50px;
+	left: 30%;
+	z-index: 1000;
+	text-align: left;
+	display: none;
+}
+.note{
+	padding: 0px;
+	background: #fff;
+	border: 1px solid lightgrey;
+	border-top: none;
+	padding-top: 10px;
+	z-index: 1000;
+}
+.noteheading{
+	border-bottom: 1px solid lightgrey;
+	padding-left: 15px;
+}
+.notelist ul{
+	list-style: none;
+	padding-left: 0px;
+	color: #333;
+	font-size: 12px;
+}
+.notelist ul li{
+	width: 100%;
+	padding: 4px 5px;
+	border-bottom: 1px solid lightgrey
+}
+.notelist ul li:hover{
+	cursor: pointer;
+}
+.noteoption{
+	font-size: 13px;
+	padding-left: 5px;
+}
+.noteoption a{
+	padding-left: 15px;
+}
+.noteoption a:hover{
+	cursor: pointer;
+}
+.messagediv{
+	width: 40%;
+	position: absolute;
+	top: 50px;
+	left: 30%;
+	z-index: 1000;
+	text-align: left;
+	display: none;
+}
+#loading{
+	text-align: center;
+	background: #fff;
+	padding: 15px 15px;
+	font-style: italic;
+}
+.message{
+	padding: 0px;
+	background: #fff;
+	border: 1px solid lightgrey;
+	border-top: none;
+	z-index: 1000;
+}
+.message-menu ul{
+	list-style: none;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	color: #333;
+	border-bottom: 1px solid lightgrey;
+}
+.message-menu ul li{
+	display: inline-block;
+	padding: 5px 10px;
+}
+.message-menu ul li:hover{
+	cursor: pointer;
+	color: #000;
+}
+.active{
+	font-size: 10px;
+	color: green;
+	float: right;
+	margin-right: 30px;
+}
+.inactive{
+	font-size: 10px;
+	color: gray;
+	float: right;
+	margin-right: 30px;
+}
+.messagelist{
+}
+.messagelist ul{
+	list-style: none;
+	padding: 0px;
+	color: #333;
+	font-size: 12px;
+}
+.messagelist ul li #pointing{
+	margin-bottom: 5px;
+	padding: 1px 15px;
+	position: relative;
+	border-bottom: 1px solid lightgrey;
+}
+.messagelist ul li #pointing:hover{
+	cursor: pointer;
+}
+.last-msg{
+	padding-left: 40px;
+	color: blue;
+}
+#activelist{
+	position: relative;
+}
+#activelist span{
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	color: green;
+	z-index: 100;
+	font-size: 10px;
+}
+.msgoption{
+	font-size: 13px;
+	padding-left: 10px;
+}
+.msgoption a{
+	padding: 10px;
+	color: blue;
+}
+.msgoption a:hover{
+	cursor: pointer;
+}
+.activeuserul{
+	list-style: none;
+}
+.activespan{
+	float: right;
+	margin-right: 30px;
+	font-size: 10px;
+}
+/*chat css*/
+/*.chatcontent{
+	width: 60%;
+	margin: auto;
+	background: #f0f0f0;
+}*/
+.friend-div{
+	width: 60%;
+	margin: auto;
+	border-bottom: 1px solid lightgrey;
+	padding: 4px 10px;
+	background: #f0f0f0;
+	position: fixed;
+	top: 0px;
+	left: 20%;
+	z-index: 1000;
+}
+.friend-div div{
+	float: right;
+	margin-right: 30px;
+	margin-top: 5px;
+	font-size: 17px;
+	cursor: pointer;
+}
+.mychat{
+	text-align: right;
+	padding-right: 15px;
+	padding-top: 5px;
+	background: #fff;
+}
+.friendchat{
+	text-align: left;
+	padding-left: 15px;
+	padding-top: 5px;
+	background: #fff;
+}
+.msgfile{
+	width: 20%;
+}
+.fileright{
+	margin-right: 30px;
+}
+.fileleft{
+	margin-left: 30px;
+}
+.file{
+	display: none;
+}
+.framediv{
+	width: 60%;
+	margin: auto;
+	padding: 0px;
+	padding-top: 5px;
+}
+#framediv{
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.chatform{
+	width: 60%;
+	margin: auto;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	left: 20%;
+	background: #f0f0f0;
+	color: #fff;
+	padding: 30px 10px;
+	border: 1px solid lightgrey;
+	border-radius: 5px 5px;
+}
+.chatform input{
+	width: 40%;
+	border: 1px solid lightgrey;
+	-webkit-border-radius: 20px 20px;
+	-moz-border-radius: 20px 20px;
+	color: #444;
+	padding: 4px 10px;
+	font-family: arial;
+}
+.chatform button{
+	background: none;
+	border: none;
+}
+.chatform label{
+	cursor: pointer;
+}
+@media(max-width: 768px){
+	#blogpost,#passchange,.explain,#feeds,.cp,.profile,.friend-div,.friendsdiv,.message,.chatcontent,.chatform{
+		width: 100%;
+	}
+	.photodiv{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.followfrn,.followerfrn,.aboutuser{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.framediv{
+		width: 100%;
+	}
+	.chatform,.friend-div{
+		left: 0px;
+	}
+	.messagediv,.notediv{
+		left: 10%;
+		width: 80%;
+	}
+	.chatform input{
+		width: 60%;
+	}
+	.feedphoto{
+		width: 98%;
+	}
+	.feed-ul li{
+		padding-left: 15px;
+	}
+	.filedivright{
+		right: 0px;
+	}
+	.emojidiv ul{
+		top: 35px;
+		left: -100px;
+	}
+}

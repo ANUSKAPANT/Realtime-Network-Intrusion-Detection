@@ -1,0 +1,303 @@
+/* Simple Sitemap Menu */
+
+body .simple-sitemap-menu li {
+    float: initial;
+}
+
+/* Simple Sitemap */
+
+.simple-sitemap-container ul {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+}
+
+/* The following rule seems necessary when the Gutenberg plugin is not installed. */
+.editor-styles-wrapper .simple-sitemap-container ul, .editor-styles-wrapper .simple-sitemap-container ol {
+  margin: 0 0 0 1.2em;
+  padding: 0;
+}
+
+.simple-sitemap-wrap:not(:first-of-type) {
+  margin-top: 1.5em;
+}
+
+.simple-sitemap-container .excerpt {
+    font-size: 0.85em;
+/*    line-height: 17px;
+    margin-top: -2px;
+    color: #555;
+    margin-bottom: -5px;
+    padding: 3px 3px 0 0;
+    */
+}
+
+.simple-sitemap-container span.excerpt {
+    /* margin-left: -9px; */
+    position: relative;
+    left: 8px;
+}
+
+.simple-sitemap-container .separator {
+    border-bottom: 1px #eee solid;
+    margin-bottom: -5px;
+    margin-top: 18px;
+    padding: 0;
+}
+
+/* don't show the bottom border on the last entry */
+.simple-sitemap-container ul.main > li:last-child .separator {
+    border-bottom: 0;
+}
+
+/* featured image */
+.simple-sitemap-fi {
+    position: relative;
+    top: 6px;
+    left: -5px;
+    margin-left: 5px;
+}
+
+/* Flexbox sitemap columns */
+
+.simple-sitemap-container.col {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.simple-sitemap-wrap.col {
+    width: 260px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.simple-sitemap-wrap.col ul.main {
+    margin-left: 20px;
+}
+
+.simple-sitemap-container.hide-icon ul.main {
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.simple-sitemap-container.hide-icon ul.main ul.children {
+    list-style-type: none;
+}
+
+/* Horizontal Sitemap */
+
+.horizontal ul.children {
+    display: inline;
+    margin-left: 0;
+}
+
+.simple-sitemap-wrap > ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+}
+
+.simple-sitemap-wrap > ul.horizontal li {
+    display: inline;
+}
+
+/* Sitemap Tab Styles (for new tabs added June 2019) */
+
+.simple-sitemap-container.tab-enabled * {
+    box-sizing: border-box;
+}
+
+.simple-sitemap-container.tab-enabled ul.main {
+  margin: 2em 1em 2em 3em;
+}
+
+.simple-sitemap-container.tab-enabled ul.main.horizontal, .simple-sitemap-container.tab-enabled ul.main.horizontal {
+  margin: 2em 1em 2em 2em;
+}
+
+.simple-sitemap-container.tab-enabled .no-posts {
+  font-style: italic;
+  margin: 2em 1em 2em 2em;
+}
+
+.simple-sitemap-container .no-posts {
+  font-style: italic;
+  /*margin: 2em 1em 2em 3em;*/
+}
+
+/*.simple-sitemap-container.tab-enabled {
+  max-width: 650px;
+  width: 80%;
+  margin: 0 auto;
+}*/
+.simple-sitemap-container.tab-enabled .post-type {
+    margin: 0;
+    font-weight: normal;
+}
+.simple-sitemap-container.tab-enabled label {
+  cursor: pointer;
+  float: left;
+  margin: 0 5px 0 0;
+  display: block;
+  background-color: #eee;
+  border-radius: 4px 4px 0 0;
+}
+.simple-sitemap-container.tab-enabled input {
+  display: none;
+}
+/*.simple-sitemap-container.tab-enabled input:checked + label {
+  background-color: #de5737;
+}
+.simple-sitemap-container.tab-enabled input:checked + label > * {
+  color: #ffffff;
+}
+*/
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-1"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-1,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-2"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-2,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-3"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-3,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-4"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-4,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-5"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-5,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-6"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-6,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-7"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-7,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-8"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-8,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-9"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-9,
+.simple-sitemap-container.tab-enabled input[id^="simple-sitemap-tab-10"]:checked ~ .simple-sitemap-content .simple-sitemap-tab-10 {
+  display: block;
+}
+.simple-sitemap-container.tab-enabled .simple-sitemap-content {
+  clear: both;
+  position: relative;
+}
+.simple-sitemap-container.tab-enabled .panel {
+  width: 100%;
+/*    padding: 25px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+*/
+  display: none;
+  border: 1px solid #ddd;
+  /*border-top: 4px solid #de5737;*/
+  border-radius: 0 0 4px 4px;
+}
+
+/*@media only screen and (max-width: 500px) {
+  .simple-sitemap-container.tab-enabled label {
+    width: 100%;
+    border-radius: 0;
+  }
+  .simple-sitemap-container.tab-enabled label[for^="simple-sitemap-tab-1"] {
+    border-radius: 4px 4px 0 0;
+  }
+}*/
+
+/* react-select */
+.components-panel__row.simple-sitemap .react-select-container {
+  min-width: 120px;
+}
+
+/* Labels */
+
+.label-wide label {
+  max-width: 100%;
+}
+
+/* Tab colors */
+
+.components-panel .tab-colors {
+  display: block;
+}
+
+.components-panel .series-color {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+
+.components-panel .series-color:first-of-type {
+  margin: 0;
+}
+
+.components-panel .series-color, .components-panel .series-color > div {
+  width: 22px;
+  height: 22px;
+}
+
+.components-panel .series-color > div {
+  border-radius: 0;
+  border: 1px solid #ccc;
+}
+
+/* Inspector panel: @todo these need moving to a block admin only stylesheet  */
+
+/* disabled styles for inspector panel elements */
+.components-panel__row.simple-sitemap .disabled .components-base-control__help {
+  color: rgb(232, 119, 119);
+}
+
+.edit-post-settings-sidebar__panel-block .components-panel__body .components-panel__row.simple-sitemap .components-base-control
+/*.edit-post-settings-sidebar__panel-block .components-panel__body .components-panel__row.simple-sitemap .components-base-control:last-child*/ {
+  margin-bottom: 0;
+}
+
+.components-panel__row.simple-sitemap .components-base-control .components-base-control__field {
+  margin-bottom: 8px;
+}
+
+.components-panel__row.simple-sitemap .components-base-control .components-base-control__help {
+  margin-bottom: 4px;
+}
+
+.components-panel__row.simple-sitemap.order {
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.components-panel__row.simple-sitemap.order .components-base-control:first-child {
+  margin-right: 1em;
+}
+
+.components-panel__row.simple-sitemap.general-chk {
+  margin-top: 0;
+}
+
+/*.components-panel__row.simple-sitemap > .components-base-control {
+  margin-bottom: 0;
+}*/
+
+/*.edit-post-settings-sidebar__panel-block .components-panel__body .series-checkboxes .components-base-control {
+  margin-bottom: 0;
+  padding: 0;
+}
+.edit-post-settings-sidebar__panel-block .components-panel__body .series-checkboxes .components-base-control input {
+  margin-right: 5px;
+}*/
+
+/* test we need all styles below */
+
+/*
+.components-panel .series-checkboxes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/*
+.components-panel .series-checkboxes .series-checkbox {
+  width: 28px;
+  height: 18px;
+  margin: 2px 20px 0;
+  border-radius: 3px;
+}
+*/
+
+/*
+.components-panel .chart-colors-grid {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 20px));
+}
+.components-panel .chart-colors-grid li {
+  margin: 0;
+}
+*/

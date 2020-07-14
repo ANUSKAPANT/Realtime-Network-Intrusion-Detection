@@ -1,0 +1,18 @@
+{%extends 'netapp/base.html'%}
+
+{%load static%}
+{%block head%}
+	<link rel="stylesheet" type="text/css" href="{%static  'netapp/css/style.css'%}">
+{%endblock%}
+
+{%block body%}
+<body>
+	{%if notes%}
+		<ul class="notes-ul">
+			{%for note in notes%}
+				<li>{{note}}</li>
+			{%endfor%}
+		</ul>
+	{%endif%}
+</body>
+{%endblock%}

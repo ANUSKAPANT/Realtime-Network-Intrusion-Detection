@@ -1,0 +1,46 @@
+{%extends 'netapp/base.html'%}
+
+{%load static%}
+{%block head%}
+	<link rel="stylesheet" type="text/css" href="{%static  'netapp/css/style.css'%}">
+{%endblock%}
+
+{%block body%}
+<body>
+	<header>
+		<nav class="navbar bg-light">
+			<h3>
+				<span id="brand">
+					<i class="fa fa-cloud" style="color: orange;"></i> 
+					<img src="{%static 'netapp/img/brand.png'%}" style="border-radius: 40%;"></span>
+			</h3>
+		</nav>
+	</header>
+	<br><br>
+	{% if messages %}
+	<center>
+		<ul class="messages">
+		    {% for message in messages %}
+		    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		    {% endfor %}
+		</ul>
+	</center>
+	{% endif %}
+	<div class="logindiv">
+		<h4><i class="fa fa-sign-in"></i> System Login</h4>
+		<form action="" method="post" autocomplete="off">{%csrf_token%}
+			{%if errors%}
+			<ul>
+				{%for error in errors%}
+					<li>{{error}}</li>
+				{%endfor%}
+			</ul>
+			{%endif%}
+			<input type="text" name="username" placeholder="Username" required="required" value="{{username}}"><br>
+			<input type="password" name="password" placeholder="Password" required="required"><br>
+			<a href="#">Forget Password?</a><br>
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</form>
+	</div>
+</body>
+{%endblock%}
